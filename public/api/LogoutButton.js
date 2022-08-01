@@ -1,4 +1,3 @@
-
 class LogoutButton {
   constructor() {
     [this.logoutBtn] = document.getElementsByClassName('logout');
