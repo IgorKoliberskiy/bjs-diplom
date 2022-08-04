@@ -1,12 +1,10 @@
 'use strict';
 
 // выход из личного кабинета
-const logoutButton = new LogoutButton();
-logoutButton.action = function() {
-  ApiConnector.logout (response => {
-    if (response.success) {
-      location.reload();
-    }
+const logout = new LogoutButton();
+logout.action = () => { 
+  ApiConnector.logout (() => {
+    location.reload();
   });
 }
 
@@ -24,7 +22,6 @@ function getCurrentRatesBoard() {
       ratesBoard.fillTable(response.data);
     }
   });
-  return;
 }
 
 getCurrentRatesBoard();
@@ -44,7 +41,7 @@ moneyManager.addMoneyCallback = function (data) {
   });
 }
 
-moneyManager.conversionMoneyCallback = function (data) {
+moneyManager.conversionMoneyCallback = data => {
   ApiConnector.convertMoney(data, response => {
     if (response.success) {
       ProfileWidget.showProfile(response.data);
