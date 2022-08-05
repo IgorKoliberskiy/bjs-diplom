@@ -6,7 +6,7 @@ userForm.loginFormCallback = data => {
     if (response.success) {
       location.reload();
     } else {
-      userForm.setLoginErrorMessage('Ошибка! Попробуйте заново ввести логин и пароль');
+      userForm.setLoginErrorMessage(response.error);
     }
   });
 };
@@ -16,7 +16,7 @@ userForm.registerFormCallback = data => {
     if (response.success) {
       location.reload();
     } else {
-      userForm.setRegisterErrorMessage('Ошибка! Неверно указаны логин или пароль. Пожалуйста, проверьте правильность введенных данных.');
+      userForm.setRegisterErrorMessage(response.error);
     }
   });
 };

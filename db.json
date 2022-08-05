@@ -72,6 +72,18 @@
         "EUR": 1000,
         "NTC": 1000
       }
+    },
+    {
+      "created_at": "2022-08-05T08:00:06.942Z",
+      "login": "3t525",
+      "password": "wertw",
+      "id": 7,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
     }
   ],
   "favorites": {
